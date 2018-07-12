@@ -40,7 +40,7 @@ public class NewJFrame extends javax.swing.JFrame {
         this.setTitle("Cirkels... met de groeten van Piet!");
         this.pack();
         this.setResizable(false);
-        this.setLocation(300,300);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
         timer.start();
     }
@@ -390,8 +390,8 @@ public class NewJFrame extends javax.swing.JFrame {
    private void initEigenVariabelen() {
       bandbreedte = 16;
       band = 8;
-      zetKleur(1, 0, 0, 128, 100);
-      zetKleur(2, 0, 0, 0, 75);
+      zetKleur(1, 0, 0, 128, 50);
+      zetKleur(2, 0, 0, 0, 50);
       buf_voor_jpanel = new BufferedImage(400, 300, BufferedImage.TYPE_INT_ARGB);
       buf_foto = new BufferedImage(400, 300, BufferedImage.TYPE_INT_ARGB);
       al = new ActionListener() {
@@ -400,7 +400,7 @@ public class NewJFrame extends javax.swing.JFrame {
             panel_toonCirkels.repaint();
          }
       };
-      timer = new Timer(40, al);
+      timer = new Timer(25, al);
       //
       button_Color1.setBackground(kleur1_opaque);
       button_Color1.setForeground(inverteerKleur(kleur1_opaque, false));
